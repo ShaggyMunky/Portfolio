@@ -58,19 +58,43 @@ body {
     line-height: 1.7;
     font-family: 'Montserrat', sans-serif;
 }
-.ptb-90 {padding: 90px 0;}
-.p-bottom-0 {padding-bottom: 0}
-.p-top-90 {padding-top: 90px}
-.m-bottom-80 {margin-bottom: 80px}
-.m-bottom-30 {margin-bottom: 30px;}
-.m-top-60 {margin-top: 60px;}
+.ptb-90 {
+    padding: 90px 0;
+}
+.p-bottom-0 {
+    padding-bottom: 0;
+}
+.p-top-90 {
+    padding-top: 90px;
+}
+.m-bottom-80 {
+    margin-bottom: 80px
+}
+.m-bottom-30 {
+    margin-bottom: 30px;
+}
+.m-top-60 {
+    margin-top: 60px;
+}
 input[type="text"], input[type="email"], input[type="tel"], input[type="submit"], textarea {
-    border: 1px solid #ddd;
+    outline: none;
+    border: 1px solid #8fb4c4;
     background: transparent;
+    -webkit-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
     -webkit-box-shadow: none;
             box-shadow: none;
 }
-.menu-navbar ul li.active a {color: #333;}
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="submit"]:focus, textarea:focus {
+    box-shadow: 0 0 5px #49c749;
+    /*padding: 3px 0px 3px 3px;*/
+    /*margin: 5px 1px 3px 0px;*/
+    border: 1px solid #49c749;
+}
+.menu-navbar ul li.active a {
+    color: #49c749;
+    text-shadow: 1px 1px 6px #005274;
+}
 
 /*------------------------------
     ** Some Section Custom css**
@@ -89,7 +113,7 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="submit"]
     ** PreLoder **
 ===============================*/
 .about-me-preloder {
-    background-color: #7C4BAB ; 
+    background-color: #fafffe ;
     height: 100%;
     width: 100%;
     top: 0;
@@ -119,13 +143,13 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="submit"]
 }
 
 @keyframes sk-rotateplane {
-  0% { 
+  0% {
     transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
-  } 50% { 
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+  } 50% {
     transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
-  } 100% { 
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+  } 100% {
     transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
     -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
   }
@@ -141,20 +165,19 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="submit"]
 .home-2 .hero-text h1 {
     font-size: 55px;
 }
-.home-3.header-navbar-area {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9;
+/*.home-3.header-navbar-area {*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*width: 100%;*/
+    /*z-index: 9;*/
+/*}*/
+/*.home-3.header-navbar-area {*/
+    /*background: transparent;*/
+/*}*/
+.slider-bg {
+    background-image: url(img/slider/slider-bg-5.jpg);
 }
-.home-3.header-navbar-area {
-    background: transparent;
-}
-.slider-bg-2 {background-image: url(img/slider/slider-bg-2.jpg);}
-.slider-bg-3 {background-image: url(img/slider/slider-bg-3.jpg);}
-.slider-bg-4 {background-image: url(img/slider/slider-bg-4.jpg);}
-.slider-bg-5 {background-image: url(img/slider/slider-bg-5.jpg);}
 .hero-slide-wrap {
     display: table;
     width: 100%;
@@ -185,16 +208,15 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="submit"]
     opacity: .6;
     z-index: -1;
 }
-.slider-text .cd-headline {font-size: 28px; text-transform: uppercase;} 
+.slider-text .cd-headline {
+    font-size: 28px;
+    text-transform: uppercase;
+    }
 .slider-text h1 {
     font-size: 65px;
     font-weight: 700;
     margin: 20px 0;
     text-transform: capitalize;
-}
-.slider-text h1 span {
-    background: #7C4BAB;
-    padding: 0 20px;
 }
 .hero-slider-area-active .owl-dots div {
     height: 20px;
@@ -210,10 +232,6 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="submit"]
     text-align: center;
     margin: 0 auto;
     width: 100%;
-}
-.hero-slider-area-active .owl-dots div.active {
-    background: #7C4BAB;
-    border-color: #7C4BAB;
 }
 
 /*************************
@@ -249,45 +267,6 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="submit"]
 /*==============================
     03. Header-slider Area css
 ===============================*/
-.hero-slide-bg {
-    background-image: url(img/slider/slider-bg.jpeg);
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #ddd;
-    position: relative;
-    z-index: 1;
-}
-.hero-slide-bg:after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: -webkit-linear-gradient(330deg, #7c4bab 0%, #8fd3f4 100%);
-    background: -o-linear-gradient(330deg, #7c4bab 0%, #8fd3f4 100%);
-    background: linear-gradient(120deg, #7c4bab 0%, #8fd3f4 100%);
-    content: "";
-    z-index: -1;
-    opacity: .8;
-}
-.hero-slide-info {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    text-align: center;
-}
-.hero-slide-info img {
-    border-radius: 50%;
-    border: 10px solid #ddd;
-    height: 170px;
-    width: 170px;
-}
-.hero-text {color: #fff;}
 .cd-words-wrapper b i {
     border-radius: 50%;
     border: 10px solid #ddd;
@@ -298,24 +277,6 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="submit"]
  .cd-headline.clip b {
      border-bottom: 1px solid #fff; 
  }
-.hero-text h1 {
-    text-align: center;
-    font-size: 28px;
-    margin: 20px 0 10px;
-    font-weight: 300;
-}
-.hero-text .cd-headline {
-    text-align: center;
-    font-size: 28px;
-    margin: 0px 0 10px;
-    font-weight: 300;
-    padding-bottom: 10px;
-}
-.hero-text p {
-    max-width: 500px;
-    color: #fff;
-    margin: 0px 0 60px;
-}
 
 /*==============================
     04. Social links css
@@ -360,7 +321,7 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="submit"]
     05. header-navbar-area css
 ===============================*/
 .header-navbar-area, #sticker-mobile{
-    background: #7C4BAB;
+    background: #007EB2;
 }
 #menu-stick.header-top.stick, #sticker-mobile.header-top.stick {
     position: fixed;
@@ -371,7 +332,7 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="submit"]
     -o-transition: .9s;
     transition: .9s;
     z-index: 999;
-    background: #7C4BAB;
+    background: #007EB2;
 }
 .logo {
     margin: 14px 0 0;
@@ -406,8 +367,12 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="submit"]
     -o-transition: .3s;
     transition: .3s;
 }
-.about-me-all-info {background: #7c4bab;}
-.about-me-img {padding: 40px;}
+.about-me-all-info {
+    background: #007EB2;
+}
+.about-me-img {
+    padding: 40px;
+}
 .about-me-info {
     color: #fff;
     font-size: 24px;
@@ -426,7 +391,9 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="submit"]
     margin-top: 40px;
     max-height: 230px;
 }
-.home-3 .about-me {padding-left: 0;}
+/*.home-3 .about-me {*/
+    /*padding-left: 0;*/
+/*}*/
 .resume-btn {
     text-transform: uppercase;
     padding: 12px 20px;
@@ -439,7 +406,7 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="submit"]
     transition: .5s;
 }
 .resume-btn:hover {
-    background: #7C4BAB;
+    background: linear-gradient(#00A600, #49c749);
     color: #fff;
     box-shadow: none;
 }
@@ -473,8 +440,8 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="submit"]
     float: right;
     margin-right: 40px;
     padding: 0 5px;
-    background: #7c4bab;
-    border: 2px solid #7c4bab;
+    background: #00A600;
+    border: 2px solid #00A600;
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s;
@@ -1066,7 +1033,9 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="submit"]
     margin-left: -10px;
     margin-right: -10px;
 }
-.portfolio-menu button.active {border-bottom: 2px solid #7c4bab;}
+.portfolio-menu button.active {
+    border-bottom: 2px solid #7c4bab;
+}
 .single-portfolio-item {
   position: relative;
   z-index: 3;
@@ -1077,18 +1046,20 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="submit"]
     transition: .5s;
     margin: 5px -10px;
 }
-.home-3 .single-portfolio-item {margin: 0 0 30px;}
-.home-3 .single-portfolio-item h4 {
-    margin-top: 30px;
-    text-transform: capitalize;
-    margin-bottom: 0;
-}
+/*.home-3 .single-portfolio-item {*/
+    /*margin: 0 0 30px;*/
+/*}*/
+/*.home-3 .single-portfolio-item h4 {*/
+    /*margin-top: 30px;*/
+    /*text-transform: capitalize;*/
+    /*margin-bottom: 0;*/
+/*}*/
 
-.home-3 .single-portfolio-item h4 span {
-    display: block;
-    font-size: 12px;
-    margin-top: 6px;
-}
+/*.home-3 .single-portfolio-item h4 span {*/
+    /*display: block;*/
+    /*font-size: 12px;*/
+    /*margin-top: 6px;*/
+/*}*/
 .portfolio-img {
   position: relative;
   z-index: 9999;
@@ -1223,13 +1194,19 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="submit"]
     padding: 10px 38px;
     display: inline-block;
     margin: 25px 0 0;
-    transition: .3s: 
+    color: #007EB2;
+    transition: .5s;
+
+    -webkit-box-shadow: 0 0 20px #ccc;
+    box-shadow: 0 0 20px #ccc;
+    border-radius: 50px;
+    font-weight: 500;
 }
 .contact-form input[type="submit"]:hover {
-    background: #7C4BAB;
+    background: linear-gradient(#00A600, #49c749);
     color: #fff;
 }
-.home-2 .contact-form input[type="submit"], .home-3 .contact-form input[type="submit"]  {
+.home-2 .contact-form input[type="submit"] {
     width: auto;
     padding: 10px 80px;
 }
@@ -1248,7 +1225,7 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="submit"]
     font-size: 18px;
 }
 .footer-copyright-area {
-    background: #7C4BAB;
+    background: #007EB2;
     padding: 30px 0;
     margin: 50px 0 0;
 }
@@ -1261,11 +1238,11 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="submit"]
     15. scrollUp css
 ===============================*/
 #scrollUp {
-    bottom: 5px;
-    right: 20px;
+    bottom: 0;
+    right: 2%;
     height: 54px;
     width: 60px;
-    background: #7C4BAB;
+    background: #007EB2;
     color: #fff;
     font-size: 30px;
     line-height: 0;
