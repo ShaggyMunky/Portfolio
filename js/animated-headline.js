@@ -11,8 +11,8 @@ jQuery(document).ready(function($){
 		selectionDuration = 500,
 		typeAnimationDelay = selectionDuration + 800,
 		//clip effect 
-		revealDuration = 600,
-		revealAnimationDelay = 1500;
+		revealDuration = 100,
+		revealAnimationDelay = 4000;
 	
 	initHeadline();
 	
@@ -48,7 +48,7 @@ jQuery(document).ready(function($){
 				setTimeout(function(){ headline.find('.cd-words-wrapper').addClass('is-loading') }, barWaiting);
 			} else if (headline.hasClass('clip')){
 				var spanWrapper = headline.find('.cd-words-wrapper'),
-					newWidth = spanWrapper.width() + 10
+					newWidth = spanWrapper.width() + 10;
 				spanWrapper.css('width', newWidth);
 			} else if (!headline.hasClass('type') ) {
 				//assign to .cd-words-wrapper the width of its longest word
@@ -59,7 +59,7 @@ jQuery(document).ready(function($){
 				    if (wordWidth > width) width = wordWidth;
 				});
 				headline.find('.cd-words-wrapper').css('width', width);
-			};
+			}
 
 			//trigger animation
 			setTimeout(function(){ hideWord( headline.find('.is-visible').eq(0) ) }, duration);
@@ -67,7 +67,8 @@ jQuery(document).ready(function($){
 	}
 
 	function hideWord($word) {
-		var nextWord = takeNext($word);
+		var wordLength = $word.text().split("").length,
+            nextWord = takeNext($word);
 		
 		if($word.parents('.cd-headline').hasClass('type')) {
 			var parentSpan = $word.parent('.cd-words-wrapper');
@@ -84,7 +85,7 @@ jQuery(document).ready(function($){
 			showLetter(nextWord.find('i').eq(0), nextWord, bool, lettersDelay);
 
 		}  else if($word.parents('.cd-headline').hasClass('clip')) {
-			$word.parents('.cd-words-wrapper').animate({ width : '2px' }, revealDuration, function(){
+			$word.parents('.cd-words-wrapper').animate({ width : '2px' }, (revealDuration * wordLength), function(){
 				switchWord($word, nextWord);
 				showWord(nextWord);
 			});
@@ -102,12 +103,13 @@ jQuery(document).ready(function($){
 	}
 
 	function showWord($word, $duration) {
+	    var wordLength = $word.text().split("").length;
 		if($word.parents('.cd-headline').hasClass('type')) {
 			showLetter($word.find('i').eq(0), $word, false, $duration);
 			$word.addClass('is-visible').removeClass('is-hidden');
 
 		}  else if($word.parents('.cd-headline').hasClass('clip')) {
-			$word.parents('.cd-words-wrapper').animate({ 'width' : $word.width() + 10 }, revealDuration, function(){ 
+			$word.parents('.cd-words-wrapper').animate({ 'width' : $word.width() + 10 }, (revealDuration * wordLength), function(){
 				setTimeout(function(){ hideWord($word) }, revealAnimationDelay); 
 			});
 		}

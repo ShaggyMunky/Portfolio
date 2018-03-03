@@ -82,7 +82,7 @@ a {
 .cd-words-wrapper {
   display: inline-block;
   position: relative;
-  text-align: left;
+  /*text-align: left;*/
 }
 .cd-words-wrapper b {
   display: inline-block;
