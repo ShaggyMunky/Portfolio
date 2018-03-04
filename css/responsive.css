@@ -95,9 +95,13 @@ position: absolute;
 .hero-text .cd-headline {
     font-size: 12px;
 }
-.slider-text h1 {font-size: 28px;}
+.slider-text h1 {
+    font-size: 28px;
+    letter-spacing: 10px;
+}
 .slider-text .cd-headline {
     font-size: 16px;
+    letter-spacing: 3px;
 }
 .hero-text h1 {
     font-size: 15px;
@@ -152,11 +156,11 @@ position: absolute;
 .resume-print .resume-btn {margin-top: 20px;}
 .l-shape:before {
     width: 20%;
-    left: 25%;
+    left: 26%;
 }
 .l-shape:after {
     width: 20%;
-    right: 21%;
+    right: 23%;
 }
 .section-divide-line:before {
     display: none;
@@ -261,7 +265,10 @@ position: absolute;
 .hero-text h1 {
     font-size: 20px;
 }
-.slider-text h1 {font-size: 40px;}
+.slider-text h1 {
+    font-size: 40px;
+    letter-spacing: 17px;
+}
 .slider-text .cd-headline {
     font-size: 24px;
 }
@@ -315,3 +322,26 @@ position: absolute;
 }
 
 } /*end*/
+
+/* bootstrap equivalent break points*/
+@media screen and (min-width: 768px) {
+    .about-me-info p {
+        padding: 0 20%
+    }
+}
+@media screen and (min-width: 992px) {
+    .about-me-info p {
+        padding: 0 16%
+    }
+    .slider-text h1 {
+        letter-spacing: 27px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .about-me-info p {
+        padding: 0 22%
+    }
+    .slider-text h1 {
+        letter-spacing: 31px;
+    }
+}
