@@ -765,6 +765,7 @@ xclip
   width: 2px;
   height: 100%;
   background-color: #aebcb9;
+  animation: linear;
 }
 .cd-headline.clip b {
   opacity: 0;

@@ -34,7 +34,7 @@
     01. Google Fonts
 ===============================*/
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
-@import url('https://fonts.googleapis.com/css?family=Dosis|Open+Sans')
+@import url('https://fonts.googleapis.com/css?family=Dosis|Open+Sans');
 
 /*==============================
     02. Default Css
@@ -95,7 +95,8 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
 .menu-navbar ul li.active a {
     color: #ffffff;
     border-bottom: 1px solid #49c749;
-    text-shadow: 1px 1px 6px #005274;
+    text-shadow: 1px 2px 5px #00364c;
+
     padding-bottom: 0;
 }
 
@@ -295,11 +296,11 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
 }
 .social-links a:after {
     padding: 0 20px;
-    height: 40px;
+    height: 49px;
     border: 2px solid #fff;
-    top: -10px;
-    left: 0;
-    border-radius: 30px 5px 30px 5px;
+    top: -8px;
+    left: 7px;
+    border-radius: 33px 5px 33px 5px;
     content: "";
     width: 60px;
     position: absolute;
@@ -315,11 +316,12 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     visibility: visible;
 }
 .social-links i {
-  color: #fff;
-  padding-left: 3px;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s;
+    color: #fff;
+    padding-left: 3px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    font-size: 3rem;
 }
 
 /*==============================
@@ -357,9 +359,6 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     -o-transition: .3s;
     transition: .3s;
 }
-.menu-navbar ul li:last-child a {
-    padding-right: 0;
-}
 
 /*==============================
     06. about-us css
@@ -392,6 +391,8 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     font-weight: 400;
     font-size: 53px;
     margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2rem;
 }
 .about-me h4 {
     font-size: 24px;
@@ -401,7 +402,10 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     margin-top: 40px;
     max-height: 230px;
 }
-/*.home-3 .about-me {*/
+.about-me p{
+    font-family: "Open Sans", arial, sans-serif;
+}
+    /*.home-3 .about-me {*/
     /*padding-left: 0;*/
 /*}*/
 .resume-btn {
@@ -518,6 +522,9 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
 **language circle progress bar**
 
 ===============================*/
+.skill h3.text-transform{
+    letter-spacing: 1rem;
+}
 .all-skill-area {
     -webkit-box-shadow: 0 3px 6px 0 rgba(0,0,0,.1);
             box-shadow: 0 3px 6px 0 rgba(0,0,0,.1);
@@ -527,10 +534,11 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     font-weight: 400;
     margin: 0 0 30px;
     line-height: 40px;
-    text-transform: capitalize;
+    text-transform: uppercase;
     position: relative;
     display: inline-block;
     color: #333333;
+    letter-spacing: 2rem;
 }
 .professonal-skill h3 {
     margin: 0 0 30px;
@@ -1019,26 +1027,31 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
 /*==============================
     13. portfolio-area css
 ===============================*/
-.portfolio-area {-webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0,.1);box-shadow: 0 3px 6px 0 rgba(0, 0, 0,.1);}
+.portfolio-area {
+    -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0,.1);
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0,.1);
+}
 .portfolio-menu button {
     margin: 0 10px;
-    border-bottom: 2px solid #7C4BAB;
+    border: none;
+    box-sizing: border-box;
     -webkit-box-shadow: none;
             box-shadow: none;
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s;
     background: 0;
-      border: 0;
       padding: 0;
       text-transform: uppercase;
-      font-weight: 600;
 }
 .portfolio-menu {
   margin: -5px 0 30px;
 }
 .portfolio-menu button:hover {
     color: #5fbf5f;
+}
+.portfolio-menu button:focus{
+    outline: none;
 }
 .row.margin {
     margin-left: -10px;
