@@ -180,7 +180,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     /*background: transparent;*/
 /*}*/
 .slider-bg {
-    background-image: url(img/slider/slider-bg-5.jpg);
+    background-image: url(img/slider/hero_banner.jpg);
 }
 .hero-slide-wrap {
     display: table;
@@ -201,17 +201,17 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     position: relative;
     z-index: 2;
 }
-.slider-bg:after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: #333;
-    content: "";
-    opacity: .6;
-    z-index: -1;
-}
+/*.slider-bg:after {*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*height: 100%;*/
+    /*width: 100%;*/
+    /*!*background: #333;*!*/
+    /*content: "";*/
+    /*opacity: .6;*/
+    /*z-index: -1;*/
+/*}*/
 .slider-text .cd-headline {
     font-size: 20px;
     text-transform: uppercase;
