@@ -180,7 +180,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     /*background: transparent;*/
 /*}*/
 .slider-bg {
-    background-image: url(img/slider/hero_banner.jpg);
+    background-image: url(img/slider/hero_banner.svg);
 }
 .hero-slide-wrap {
     display: table;
