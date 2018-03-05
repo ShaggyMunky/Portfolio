@@ -34,6 +34,7 @@
     01. Google Fonts
 ===============================*/
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Dosis|Open+Sans');
 
 /*==============================
     02. Default Css
@@ -56,7 +57,7 @@ h1, h2, h3, h4, h5, h6, p {margin: 0 0 10px;}
 body {
     font-size: 14px;
     line-height: 1.7;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Dosis', sans-serif;
 }
 .ptb-90 {
     padding: 90px 0;
@@ -87,24 +88,27 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="submit"]
 }
 input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="submit"]:focus, textarea:focus {
     box-shadow: 0 0 5px #49c749;
-    /*padding: 3px 0px 3px 3px;*/
-    /*margin: 5px 1px 3px 0px;*/
+    /*padding: 3px 0 3px 3px;*/
+    /*margin: 5px 1px 3px 0;*/
     border: 1px solid #49c749;
 }
 .menu-navbar ul li.active a {
-    color: #49c749;
-    text-shadow: 1px 1px 6px #005274;
+    color: #ffffff;
+    border-bottom: 1px solid #49c749;
+    text-shadow: 1px 2px 5px #00364c;
+
+    padding-bottom: 0;
 }
 
 /*------------------------------
     ** Some Section Custom css**
 ---------------------------------*/
-.experience-area .row.m-bottom-0, .education-area .row.m-bottom-0, .my-blog-area .row.m-bottom-0 {margin-bottom: 0px;
+.experience-area .row.m-bottom-0, .education-area .row.m-bottom-0, .my-blog-area .row.m-bottom-0 {margin-bottom: 0;
 }
 .experience-area .row, .education-area .row, .my-blog-area .row {margin-bottom: 50px;
 }
 .experience-area .row:last-child, .education-area .row:last-child, .my-blog-area .row:last-child {
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 .experience-area, .education-area, .my-blog-area {
     overflow: hidden;
@@ -176,7 +180,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     /*background: transparent;*/
 /*}*/
 .slider-bg {
-    background-image: url(img/slider/slider-bg-5.jpg);
+    background-image: url(img/slider/hero_banner.svg);
 }
 .hero-slide-wrap {
     display: table;
@@ -197,26 +201,28 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     position: relative;
     z-index: 2;
 }
-.slider-bg:after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: #333;
-    content: "";
-    opacity: .6;
-    z-index: -1;
-}
+/*.slider-bg:after {*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*height: 100%;*/
+    /*width: 100%;*/
+    /*!*background: #333;*!*/
+    /*content: "";*/
+    /*opacity: .6;*/
+    /*z-index: -1;*/
+/*}*/
 .slider-text .cd-headline {
-    font-size: 28px;
+    font-size: 20px;
     text-transform: uppercase;
+    letter-spacing: 11px;
     }
 .slider-text h1 {
-    font-size: 65px;
-    font-weight: 700;
+    font-size: 38px;
+    /* font-weight: 700; */
     margin: 20px 0;
-    text-transform: capitalize;
+    letter-spacing: 27px;
+    text-transform: uppercase;
 }
 .hero-slider-area-active .owl-dots div {
     height: 20px;
@@ -274,9 +280,9 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     width: 170px;
     font-style: normal;
  }
- .cd-headline.clip b {
-     border-bottom: 1px solid #fff; 
- }
+ /*.cd-headline.clip b {*/
+     /*border-bottom: 1px solid #fff; */
+ /*}*/
 
 /*==============================
     04. Social links css
@@ -290,11 +296,11 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
 }
 .social-links a:after {
     padding: 0 20px;
-    height: 40px;
+    height: 49px;
     border: 2px solid #fff;
-    top: -10px;
-    left: 0;
-    border-radius: 30px 5px 30px 5px;
+    top: -8px;
+    left: 7px;
+    border-radius: 33px 5px 33px 5px;
     content: "";
     width: 60px;
     position: absolute;
@@ -310,18 +316,19 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     visibility: visible;
 }
 .social-links i {
-  color: #fff;
-  padding-left: 3px;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s;
+    color: #fff;
+    padding-left: 3px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    font-size: 3rem;
 }
 
 /*==============================
     05. header-navbar-area css
 ===============================*/
 .header-navbar-area, #sticker-mobile{
-    background: #007EB2;
+    background: #3D85C6;
 }
 #menu-stick.header-top.stick, #sticker-mobile.header-top.stick {
     position: fixed;
@@ -332,7 +339,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     -o-transition: .9s;
     transition: .9s;
     z-index: 999;
-    background: #007EB2;
+    background: #3D85C6;
 }
 .logo {
     margin: 14px 0 0;
@@ -352,9 +359,6 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     -o-transition: .3s;
     transition: .3s;
 }
-.menu-navbar ul li:last-child a {
-    padding-right: 0;
-}
 
 /*==============================
     06. about-us css
@@ -368,7 +372,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     transition: .3s;
 }
 .about-me-all-info {
-    background: #007EB2;
+    background: #3D85C6;
 }
 .about-me-img {
     padding: 40px;
@@ -376,12 +380,19 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
 .about-me-info {
     color: #fff;
     font-size: 24px;
-    margin: 120px 0 0 -50px;
+    margin: 90px 0 0 -50px;
+}
+.about-me-info p{
+    font-family: "Open Sans", arial, sans-serif;
+    box-sizing: border-box;
+    padding: 0 14%;
 }
 .about-me-info h2 {
-    font-weight: 700;
-    font-size: 45px;
+    font-weight: 400;
+    font-size: 53px;
     margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2rem;
 }
 .about-me h4 {
     font-size: 24px;
@@ -391,7 +402,10 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     margin-top: 40px;
     max-height: 230px;
 }
-/*.home-3 .about-me {*/
+.about-me p{
+    font-family: "Open Sans", arial, sans-serif;
+}
+    /*.home-3 .about-me {*/
     /*padding-left: 0;*/
 /*}*/
 .resume-btn {
@@ -406,7 +420,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     transition: .5s;
 }
 .resume-btn:hover {
-    background: linear-gradient(#00A600, #49c749);
+    background: #5fbf5f;
     color: #fff;
     box-shadow: none;
 }
@@ -440,8 +454,8 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     float: right;
     margin-right: 40px;
     padding: 0 5px;
-    background: #00A600;
-    border: 2px solid #00A600;
+    background: #5fbf5f;
+    /*border: 2px solid #00A600;*/
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s;
@@ -461,7 +475,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     position: absolute;
     top: -8px;
     left: 50%;
-    border: 2px solid #333;
+    border: 2px solid #00A600;
     height: 20px;
     width: 20px;
     content: "";
@@ -474,7 +488,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     position: absolute;
     top: -8px;
     left: 50%;
-    border: 2px solid #333;
+    border: 2px solid #00A600;
     height: 20px;
     width: 20px;
     content: "";
@@ -485,19 +499,19 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
 }
 .l-shape:before {
     position: absolute;
-    top: 0px;
+    top: 0;
     left: 45%;
     content: "";
-    background: #333;
+    background: #00A600;
     height: 2px;
     width: 4%;
 }
 .l-shape:after {
     position: absolute;
-    top: 0px;
+    top: 0;
     right: 44%;
     content: "";
-    background: #333;
+    background: #00A600;
     height: 2px;
     width: 4%;
 }
@@ -508,18 +522,23 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
 **language circle progress bar**
 
 ===============================*/
+.skill h3.text-transform{
+    letter-spacing: 1rem;
+}
 .all-skill-area {
     -webkit-box-shadow: 0 3px 6px 0 rgba(0,0,0,.1);
             box-shadow: 0 3px 6px 0 rgba(0,0,0,.1);
 }
 .section-title h1 {
     font-size: 46px;
-    font-weight: 700;
+    font-weight: 400;
     margin: 0 0 30px;
     line-height: 40px;
-    text-transform: capitalize;
+    text-transform: uppercase;
     position: relative;
     display: inline-block;
+    color: #333333;
+    letter-spacing: 2rem;
 }
 .professonal-skill h3 {
     margin: 0 0 30px;
@@ -579,7 +598,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     margin-right: 1px;
 }
 .progressbar h4 {
-    margin: 15px 0 0px;
+    margin: 15px 0 0;
 }
 .progressbar.language {
     width: 32.5%;
@@ -623,7 +642,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
 .experience-details .panel-heading a h3 span {
     display: block;
     font-size: 14px;
-    margin: 8px 0 0px;
+    margin: 8px 0 0;
     color: #FF8A00;
     font-weight: 400;
     text-transform: capitalize;
@@ -718,7 +737,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     position: relative;
 }
 .left .experience-time h4 {
-    margin-left: 0px;
+    margin-left: 0;
     margin-right: 40px;
     border-right: 5px solid #7c4bab;
     border-left: 1px solid #ddd;
@@ -798,7 +817,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     float: right;
     margin-right: -33px;
     margin-top: 20px;
-    background: url(img/r-shape.png) no-repeat;
+    /*background: url(img/r-shape.png) no-repeat;*/
     height: 20px;
     width: 28px;
     background-color: #fff;
@@ -846,7 +865,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     border-right: 5px solid #7c4bab;
     margin-right: 40px;
 }
-.single-education-item.last {margin-bottom: 0px;}
+.single-education-item.last {margin-bottom: 0;}
 .left .single-education-item {
     margin-left: 40px;
     border-left: 5px solid #7c4bab;
@@ -950,7 +969,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     border-left: 5px solid #7c4bab;
 }
 .left .blog-img {
-    margin-right: 0px;
+    margin-right: 0;
     margin-left: 40px;
 }
 .left .blog-img.info-line-shape:before {
@@ -1008,33 +1027,39 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
 /*==============================
     13. portfolio-area css
 ===============================*/
-.portfolio-area {-webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0,.1);box-shadow: 0 3px 6px 0 rgba(0, 0, 0,.1);}
+.portfolio-area {
+    -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0,.1);
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0,.1);
+}
 .portfolio-menu button {
     margin: 0 10px;
-    border-bottom: 2px solid #7C4BAB;
+    border: none;
+    box-sizing: border-box;
     -webkit-box-shadow: none;
             box-shadow: none;
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s;
     background: 0;
-      border: 0;
       padding: 0;
       text-transform: uppercase;
-      font-weight: 600;
 }
 .portfolio-menu {
   margin: -5px 0 30px;
 }
 .portfolio-menu button:hover {
-    color: #7C4BAB;
+    color: #5fbf5f;
+}
+.portfolio-menu button:focus{
+    outline: none;
 }
 .row.margin {
     margin-left: -10px;
     margin-right: -10px;
 }
 .portfolio-menu button.active {
-    border-bottom: 2px solid #7c4bab;
+    color: #5fbf5f;
+    border-bottom: 2px solid #5fbf5f;
 }
 .single-portfolio-item {
   position: relative;
@@ -1194,17 +1219,19 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     padding: 10px 38px;
     display: inline-block;
     margin: 25px 0 0;
-    color: #007EB2;
+    color: #3D85C6;
     transition: .5s;
-
+    border: none;
     -webkit-box-shadow: 0 0 20px #ccc;
     box-shadow: 0 0 20px #ccc;
     border-radius: 50px;
     font-weight: 500;
 }
 .contact-form input[type="submit"]:hover {
-    background: linear-gradient(#00A600, #49c749);
+    background: #5fbf5f;
     color: #fff;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 .home-2 .contact-form input[type="submit"] {
     width: auto;
@@ -1225,7 +1252,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     font-size: 18px;
 }
 .footer-copyright-area {
-    background: #007EB2;
+    background: #3D85C6;
     padding: 30px 0;
     margin: 50px 0 0;
 }
@@ -1242,7 +1269,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     right: 2%;
     height: 54px;
     width: 60px;
-    background: #007EB2;
+    background: #3D85C6;
     color: #fff;
     font-size: 30px;
     line-height: 0;
@@ -1256,7 +1283,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
 #scrollUp:before {
     position: absolute;
     top: 66%;
-    left: 25%;
+    /*left: 25%;*/
     content: "Top";
     font-size: 16px;
 }
