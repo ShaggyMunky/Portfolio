@@ -84,6 +84,10 @@
     .col-md-3.resume{
         display: none;
     }
+    .logo div {
+        font-size: 26px;
+        padding: 20px 0 0 0;
+    }
 
 }
 /* small mobile :320px. */
@@ -309,7 +313,9 @@
     div .list-text {
         margin-top: 0;
     }
-
+    .logo div {
+        padding: 5px 12px;
+    }
 
 } /*end*/
  
