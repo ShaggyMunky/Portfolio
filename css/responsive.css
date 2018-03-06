@@ -27,7 +27,7 @@
         right: 39%;
     }
     .about-me {
-        padding-left: 40px;
+        padding: 0 40px;
         margin: 22px 0;
         max-height: 230px;
     }
@@ -147,7 +147,7 @@
         letter-spacing: 1rem;
     }
     .about-me {
-        padding-left: 40px;
+        padding: 0 22px;
         margin-top: 16px;
         max-height: 230px;
     }
@@ -292,6 +292,23 @@
         text-align: center;
 
     }
+    .skill-list > li {
+        width: 122px;
+        display: inline-block;
+        vertical-align: top;
+        float: none;
+        padding: 0 0;
+        margin-top: 12px;
+    }
+    .skill-list > li.special-padding {
+        padding: 0 20px;
+    }
+    .list-text {
+        font-size: 12px;
+    }
+    div .list-text {
+        margin-top: 0;
+    }
 
 
 } /*end*/
@@ -315,7 +332,7 @@
         height: 45px;
     }
     .about-me {
-        padding: 20px;
+        padding: 0 22px;
         margin-top: 0px;
     }
     .about-personal-info {

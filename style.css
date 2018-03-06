@@ -292,7 +292,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
 }
 .social-links a {
     position: relative;
-    padding: 0 20px;
+    padding: 12px 20px;
 }
 .social-links a:after {
     padding: 0 20px;
@@ -446,6 +446,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
 .about-me-area .social-links a {
     display: block;
     margin: 24px 0;
+    padding: 0 20px;
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s;
@@ -587,6 +588,37 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
 .resume-print i {
     margin-left: 16px;
 }
+.skill-list > li {
+    width: 215px;
+    display: inline-block;
+    vertical-align: top;
+    float: none;
+    padding: 10px 15px;
+    margin-top: 40px;
+}
+.skill-list > li.special-padding{
+    padding: 10px 39px;
+}
+.skill-item {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 48px;
+    letter-spacing: 0;
+}
+.skill-icon {
+    height: 33%;
+    width: 33%;
+}
+.list-text{
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.4em;
+}
+div .list-text {
+    margin-top: 40px;
+}
 /*=====================
     language circle progress bar
 ======================*/
@@ -627,6 +659,10 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     text-align: center;
     font-size: 20px;
     font-weight: 700;
+}
+.col-sm-12 #technologies,
+.col-sm-12 #tools{
+    margin-top: 20px;
 }
 
 /*==============================
