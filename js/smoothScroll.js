@@ -14,7 +14,7 @@ $(function(){
 
         TweenMax.to($window, scrollTime, {
             scrollTo : { y: finalScroll, autoKill:true },
-            ease: Power1.easeOut,	
+            ease: Power1.easeOut,
             autoKill: true,
             overwrite: 5
         });
