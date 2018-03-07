@@ -602,7 +602,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     margin-left: 16px;
 }
 .skill-list > li {
-    width: 215px;
+    width: 145px;
     display: inline-block;
     vertical-align: top;
     float: none;
@@ -621,6 +621,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
 .skill-icon {
     height: 33%;
     width: 33%;
+    vertical-align: initial;
 }
 .list-text{
     font-size: 14px;
@@ -629,8 +630,8 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     text-align: center;
     letter-spacing: 0.4em;
 }
-div .list-text {
-    margin-top: 40px;
+h3.text-uppercase.text-center {
+    margin-top: 30px;
 }
 /*=====================
     language circle progress bar
