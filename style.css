@@ -117,7 +117,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     ** PreLoder **
 ===============================*/
 .about-me-preloder {
-    background-color: #fafffe ;
+    background-color: #111 ;
     height: 100%;
     width: 100%;
     top: 0;
@@ -125,38 +125,132 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     position: fixed;
     z-index: 9999;
  }
-.about-me-preloder .spinner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -20px;
-    margin-top: -20px;
+/*.about-me-preloder .spinner {*/
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*left: 50%;*/
+    /*margin-left: -20px;*/
+    /*margin-top: -20px;*/
+/*}*/
+/*.spinner {*/
+  /*width: 40px;*/
+  /*height: 40px;*/
+  /*background-color: #FF9E83;*/
+  /*margin: 100px auto;*/
+  /*-webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;*/
+  /*animation: sk-rotateplane 1.2s infinite ease-in-out;*/
+/*}*/
+/*@-webkit-keyframes sk-rotateplane {*/
+  /*0% { -webkit-transform: perspective(120px) }*/
+  /*50% { -webkit-transform: perspective(120px) rotateY(180deg) }*/
+  /*100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }*/
+/*}*/
+
+/*@keyframes sk-rotateplane {*/
+  /*0% {*/
+    /*transform: perspective(120px) rotateX(0deg) rotateY(0deg);*/
+    /*-webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)*/
+  /*} 50% {*/
+    /*transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);*/
+    /*-webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)*/
+  /*} 100% {*/
+    /*transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);*/
+    /*-webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);*/
+  /*}*/
+/*}*/
+.about-me-preloder .sk-folding-cube {
+position: absolute;
+top: 50%;
+left: 50%;
+margin-left: -20px;
+margin-top: -20px;
 }
-.spinner {
-  width: 40px;
-  height: 40px;
-  background-color: #FF9E83;
-  margin: 100px auto;
-  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
-  animation: sk-rotateplane 1.2s infinite ease-in-out;
-}
-@-webkit-keyframes sk-rotateplane {
-  0% { -webkit-transform: perspective(120px) }
-  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
-  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+.sk-folding-cube {
+    margin: 20px auto;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    -webkit-transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
 }
 
-@keyframes sk-rotateplane {
-  0% {
-    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
-  } 50% {
-    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
-  } 100% {
-    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
-    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
-  }
+.sk-folding-cube .sk-cube {
+    float: left;
+    width: 50%;
+    height: 50%;
+    position: relative;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.sk-folding-cube .sk-cube:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #5fbf5f;
+    -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+    animation: sk-foldCubeAngle 2.4s infinite linear both;
+    -webkit-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+}
+.sk-folding-cube .sk-cube2 {
+    -webkit-transform: scale(1.1) rotateZ(90deg);
+    transform: scale(1.1) rotateZ(90deg);
+}
+.sk-folding-cube .sk-cube3 {
+    -webkit-transform: scale(1.1) rotateZ(180deg);
+    transform: scale(1.1) rotateZ(180deg);
+}
+.sk-folding-cube .sk-cube4 {
+    -webkit-transform: scale(1.1) rotateZ(270deg);
+    transform: scale(1.1) rotateZ(270deg);
+}
+.sk-folding-cube .sk-cube2:before {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+.sk-folding-cube .sk-cube3:before {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+.sk-folding-cube .sk-cube4:before {
+    -webkit-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+}
+@-webkit-keyframes sk-foldCubeAngle {
+    0%, 10% {
+        -webkit-transform: perspective(140px) rotateX(-180deg);
+        transform: perspective(140px) rotateX(-180deg);
+        opacity: 0;
+    } 25%, 75% {
+          -webkit-transform: perspective(140px) rotateX(0deg);
+          transform: perspective(140px) rotateX(0deg);
+          opacity: 1;
+      } 90%, 100% {
+            -webkit-transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
+            opacity: 0;
+        }
+}
+
+@keyframes sk-foldCubeAngle {
+    0%, 10% {
+        -webkit-transform: perspective(140px) rotateX(-180deg);
+        transform: perspective(140px) rotateX(-180deg);
+        opacity: 0;
+    } 25%, 75% {
+          -webkit-transform: perspective(140px) rotateX(0deg);
+          transform: perspective(140px) rotateX(0deg);
+          opacity: 1;
+      } 90%, 100% {
+            -webkit-transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
+            opacity: 0;
+        }
 }
 
 /*******************************
@@ -292,7 +386,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
 }
 .social-links a {
     position: relative;
-    padding: 0 20px;
+    padding: 12px 20px;
 }
 .social-links a:after {
     padding: 0 20px;
@@ -342,10 +436,23 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     background: #3D85C6;
 }
 .logo {
-    margin: 14px 0 0;
+    margin: 0;
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s;
+}
+.logo div {
+    letter-spacing: .6rem;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 20px 12px;
+    display: inline-block;
+    color: #fff;
+}
+.logo img {
+    height: 10%;
+    width: auto;
+    display: inline-block;
 }
 .menu-navbar ul li {display: inline-block;}
 .menu-navbar .nav>li>a:focus, .nav>li>a:hover {background-color: transparent !important;}
@@ -446,6 +553,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
 .about-me-area .social-links a {
     display: block;
     margin: 24px 0;
+    padding: 0 20px;
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s;
@@ -587,6 +695,38 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
 .resume-print i {
     margin-left: 16px;
 }
+.skill-list > li {
+    width: 145px;
+    display: inline-block;
+    vertical-align: top;
+    float: none;
+    padding: 10px 15px;
+    margin-top: 20px;
+}
+.skill-list > li.special-padding{
+    padding: 10px 39px;
+}
+.skill-item {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 48px;
+    letter-spacing: 0;
+}
+.skill-icon {
+    height: 33%;
+    width: 33%;
+    vertical-align: initial;
+}
+.list-text{
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.4em;
+}
+h3.text-uppercase.text-center {
+    margin-top: 30px;
+}
 /*=====================
     language circle progress bar
 ======================*/
@@ -627,6 +767,10 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     text-align: center;
     font-size: 20px;
     font-weight: 700;
+}
+.col-sm-12 #technologies,
+.col-sm-12 #tools{
+    margin-top: 20px;
 }
 
 /*==============================
