@@ -8,9 +8,33 @@ $output = [
     'success' => null,
     'messages' => []
 ];
+echo("<script>console.log('PHP: '+$message);</script>");
+// sanitize name field
+$message['Name'] = filter_var($_POST['Name'], FILTER_SANITIZE_STRING);
+if(empty($message['Name'])){
+    $output['success'] = false;
+    $output['messages'][]= 'missing name key';
+}
+// validate email field
+$message['Email'] = filter_var($_POST['Email'], FILTER_SANITIZE_EMAIL);
+if(empty($message['Email'])){
+    $output['success'] = false;
+    $output['messages'][]= 'invalid email key';
+}
+// sanitize message
+$message['Message'] = filter_var($_POST['Message'], FILTER_SANITIZE_STRING);
+if(empty($message['Message'])){
+    $output['success'] = false;
+    $output['messages'][]= 'missing message key';
+}
+if ($output['success'] !== null){
+    http_response_code(400);
+    echo json_encode($output);
+    exit();
+}
 
 $mail = new PHPMailer;
-$mail->SMTPDebug = 3;           // Enable verbose debug output. Change to 0 to disable debugging output.
+//$mail->SMTPDebug = 3;           // Enable verbose debug output. Change to 0 to disable debugging output.
 
 $mail->isSMTP();                // Set mailer to use SMTP.
 $mail->Host = 'smtp.gmail.com'; // Specify main and backup SMTP servers.
@@ -29,11 +53,11 @@ $options = array(
     )
 );
 $mail->smtpConnect($options);
-$mail->From = 'example@gmail.com';  // sender's email address (shows in "From" field)
-$mail->FromName = 'Example Name';   // sender's name (shows in "From" field)
-$mail->addAddress('recipient1@example.com', 'First Recipient');  // Add a recipient
+$mail->From = $message['Email'];  // sender's email address (shows in "From" field)
+$mail->FromName = $message['Name'];   // sender's name (shows in "From" field)
+$mail->addAddress(EMAIL_USER);  // Add a recipient
 //$mail->addAddress('ellen@example.com');                        // Name is optional
-$mail->addReplyTo('example@gmail.com');                          // Add a reply-to address
+$mail->addReplyTo($message['Email'], $message['Name']);                          // Add a reply-to address
 //$mail->addCC('cc@example.com');
 //$mail->addBCC('bcc@example.com');
 
@@ -41,9 +65,12 @@ $mail->addReplyTo('example@gmail.com');                          // Add a reply-
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Here is the subject';
-$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+$message['Subject'] = substr($message['Subject'], 0, 78);
+$mail->Subject = $message['Subject'];
+
+$message['Message'] = nl2br($message['Message']);
+$mail->Body    = $message['Message'];
+$mail->AltBody = htmlentities($message['Message']);
 
 //Attempt email send, output result to client
 if(!$mail->send()) {
@@ -51,6 +78,7 @@ if(!$mail->send()) {
     $output['messages'][] = $mail -> ErrorInfo;
 } else {
     $output['success'] = true;
+    $output['messages'][] = 'message sent successfully';
 }
 echo json_encode($output)
 ?>
