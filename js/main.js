@@ -83,7 +83,7 @@
         /*====================
             Scrollspy
         ====================*/
-        $('body').scrollspy({ target: '.navbar-collapse',offset: 95 })
+        $('body').scrollspy({ target: '.navbar-collapse',offset: 95 });
 
         /*===================
             testimonial js
@@ -190,12 +190,12 @@
           .gmap3({
             center:[40.740, -74.18],
             zoom: 12,
-            scrollwheel: false,
+            scrollwheel: false
           })
           .groundoverlay(
             "http://www.lib.utexas.edu/maps/historical/newark_nj_1922.jpg",
-            {north: 40.773941, south: 40.712216, east: -74.12544, west: -74.22655},
-          );  
+            {north: 40.773941, south: 40.712216, east: -74.12544, west: -74.22655}
+          );
 
         /*===================
             scrollUp js
@@ -205,7 +205,37 @@
             scrollSpeed: 900,
             animation: 'fade',
             scrollText: '<i class="icofont icofont-rounded-up"></i>', 
-            activeOverlay: false, 
+            activeOverlay: false
         });
-       
+
+
 }) (jQuery);
+
+/*======================
+            mail handler
+       ========================*/
+
+$("#Submit").click(function(e){
+    // console.log(e);
+    e.preventDefault();
+    var Email = $("#Email").val();
+    var Name = $("#Name").val();
+    var Subject = $("#Subject").val();
+    var Message = $("#Message").val();
+    console.log(Email, Name, Subject, Message);
+    $.ajax({
+        type: "POST",
+        url: "php_mailer/mail_handler.php",
+        dataType: "JSON",
+        data: {
+            Email: Email, Name: Name, Subject: Subject, Message: Message
+        },
+        success: function (result) {
+            console.log("EMAIL", result);
+        },
+        error: function (result) {
+            console.log("ERROR", result);
+        }
+
+    });
+});
