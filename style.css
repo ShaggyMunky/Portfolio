@@ -117,7 +117,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     ** PreLoder **
 ===============================*/
 .about-me-preloder {
-    background-color: #111 ;
+    background-color: #111z ;
     height: 100%;
     width: 100%;
     top: 0;
@@ -506,7 +506,7 @@ margin-top: -20px;
 }
 .about-me {
     padding-left: 40px;
-    margin-top: 40px;
+    margin: 40px 0;
     max-height: 350px;
 }
 .about-me p{
