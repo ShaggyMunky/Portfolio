@@ -38,8 +38,12 @@
             menu stick js
         =======================*/
          var s = $("#menu-stick, #sticker-mobile");
+         var splashHeight = $(".hero-slide-wrap").height();
+         console.log("landing page height", splashHeight);
             var pos = s.position();
+            console.log("pos top", pos);
             $(window).scroll(function () {
+                console.log("top position for scroll bar", $(this).scrollTop());
                 var windowpos = $(window).scrollTop();
                 if (windowpos > pos.top) {
                     s.addClass("stick");
@@ -76,14 +80,14 @@
                 var headerH ='62';
                 $('html, body').stop().animate({
                     'scrollTop': $($anchor.attr('href')).offset().top - headerH + "px"
-                }, 1200, 'easeInOutExpo');
+                }, 800, 'easeInOutExpo');
                 event.preventDefault();
             });
 
         /*====================
             Scrollspy
         ====================*/
-        $('body').scrollspy({ target: '.navbar-collapse',offset: 95 })
+        $('body').scrollspy({ target: '.navbar-collapse',offset: 95 });
 
         /*===================
             testimonial js
