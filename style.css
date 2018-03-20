@@ -117,7 +117,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     ** PreLoder **
 ===============================*/
 .about-me-preloder {
-    background-color: #111 ;
+    background-color: #111z ;
     height: 100%;
     width: 100%;
     top: 0;
@@ -506,7 +506,7 @@ margin-top: -20px;
 }
 .about-me {
     padding-left: 40px;
-    margin-top: 40px;
+    margin: 40px 0;
     max-height: 350px;
 }
 .about-me p{
@@ -647,6 +647,7 @@ margin-top: -20px;
     display: inline-block;
     color: #333333;
     letter-spacing: 2rem;
+    padding-left: 24px;
 }
 .professonal-skill h3 {
     margin: 0 0 30px;
@@ -935,8 +936,7 @@ h3.text-uppercase.text-center {
     padding: 8px 15px;
     margin: 0;
 }
-.experience-details-2 h4
- span {
+.experience-details-2 h4 span {
     display: block;
     font-size: 14px;
     margin: 8px 0 5px;
@@ -968,6 +968,9 @@ h3.text-uppercase.text-center {
 }
 .experience-details-2 .info-line-shape:before {
     top: 45%;
+}
+div.copyright-text p {
+    letter-spacing: .5rem
 }
 /*==============================
     10. education css

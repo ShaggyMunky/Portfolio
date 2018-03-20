@@ -15,6 +15,7 @@ $(function(){
         }
     });
 
+
     $window.on("mousewheel DOMMouseScroll", function(event){
 
         event.preventDefault();
