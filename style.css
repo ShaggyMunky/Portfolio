@@ -1247,13 +1247,14 @@ div.copyright-text p {
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   color: #fff;
-  font-size: 30px;
+  font-size: 15px;
   opacity: 0;
   visibility: hidden;
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s; 
     z-index: 9;
+    text-align: center;
 }
 .portfolio-img::before {
   position: absolute;
@@ -1351,6 +1352,20 @@ div.copyright-text p {
 }
 .portfolio-borders .x::after {
   right: 15%;
+}
+
+
+.project-title {
+    font-weight: 600;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+.project-list {
+    display: block;
+}
+.resource-link {
+    letter-spacing: 3px;
+    /*text-transform: uppercase;*/
 }
 
 /*==============================

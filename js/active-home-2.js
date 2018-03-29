@@ -39,11 +39,11 @@
         =======================*/
          var s = $("#menu-stick, #sticker-mobile");
          var splashHeight = $(".hero-slide-wrap").height();
-         console.log("landing page height", splashHeight);
+         // console.log("landing page height", splashHeight);
             var pos = s.position();
-            console.log("pos top", pos);
+            // console.log("pos top", pos);
             $(window).scroll(function () {
-                console.log("top position for scroll bar", $(this).scrollTop());
+                // console.log("top position for scroll bar", $(this).scrollTop());
                 var windowpos = $(window).scrollTop();
                 if (windowpos > pos.top) {
                     s.addClass("stick");
@@ -195,7 +195,7 @@
             scrollSpeed: 900,
             animation: 'fade',
             scrollText: '<i class="icofont icofont-rounded-up"></i>', 
-            activeOverlay: false, 
+            activeOverlay: false
         });
        
 }) (jQuery);
