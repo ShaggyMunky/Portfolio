@@ -27,8 +27,11 @@
         /** scrollUp js **/
 
         /**===================**/
-
-
+        $(document).ready(function() {
+            setTimeout(function() {
+                $(".init-cat").trigger("click");
+            },1);
+        });
         /*----------------------------
            preloder js
         ------------------------------ */

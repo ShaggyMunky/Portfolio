@@ -1367,6 +1367,9 @@ div.copyright-text p {
     letter-spacing: 3px;
     /*text-transform: uppercase;*/
 }
+.portfolio-icon.plus {
+    font-size: 30px;
+}
 
 /*==============================
     14. Contact css
